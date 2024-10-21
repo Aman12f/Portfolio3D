@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { toast, ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 import { styles } from '../styles';
 import ComputersCanvas from './canvas/Computers';
 
@@ -13,19 +11,6 @@ const Hero = () => {
     const checkScreenWidth = () => {
       const isLarge = window.innerWidth >= 768;
       setIsLargeScreen(isLarge);
-
-      // Show the toast message for small screens
-      if (!isLarge) {
-        toast.info('The 3D model is only available on larger screens', {
-          position: 'bottom-right',
-          autoClose: 5000,
-          hideProgressBar: true,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-        });
-      }
     };
 
     // Initial check on component mount
@@ -42,8 +27,6 @@ const Hero = () => {
 
   return (
     <section className="relative w-full h-screen mx-auto">
-      {/* ToastContainer is required to render toasts */}
-      <ToastContainer />
       
       <div
         className={`absolute inset-0 top-[120px] max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}
@@ -90,4 +73,3 @@ const Hero = () => {
 };
 
 export default Hero;
-
