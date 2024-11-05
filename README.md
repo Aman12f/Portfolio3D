@@ -28,7 +28,7 @@ This portfolio project is designed to provide an overview of my professional ski
 ## Technologies Used
 
 - **Frontend**: HTML, CSS, JavaScript, React
-- **Styling**: Tailwind CSS, Bootstrap (if applicable)
+- **Styling**: Tailwind CSS
 - **Deployment**: Vercel
 
 ## Getting Started
